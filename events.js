@@ -17,7 +17,7 @@
     var a=document.createElement('article');
     a.className='event';
     a.innerHTML=
-      '<img src="'+e.poster.src+'" alt="'+e.poster.alt+'">'+
+      '<img loading="lazy" decoding="async" src="'+e.poster.src+'" alt="'+e.poster.alt+'">'+
       '<div class="body">'+
         '<h3>'+e.title+'</h3>'+
         '<p class="when">'+e.when+'</p>'+
@@ -25,7 +25,7 @@
         '<p>'+e.blurb+'</p>'+
         '<small>Facilitators</small>'+
         '<div class="chips">'+e.people.map(function(p){return '<span>'+p+'</span>';}).join('')+'</div>'+
-        (e.photo?'<img class="shot" src="'+e.photo.src+'" alt="'+e.photo.alt+'">':'')+
+        (e.photo?'<img class="shot" loading="lazy" decoding="async" src="'+e.photo.src+'" alt="'+e.photo.alt+'">':'')+
       '</div>';
     list.appendChild(a);
   });
